@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Driver</title>
+  </head>
+  <body onload="handleOnLoad()">
+    <div class="container py-4"></div>
+
+    <div class="p-5 mb-4 bg-secondary rounded-3">
+      <h1 class="display-3 fw-bold">Capstone Taxi Drivers</h1>
+    </div>
+    <div id="root"></div>
+
+   <!--Add Driver-->
+    <div>
+        <form onsubmit="return false;" method="post">
+            <h3 style="color:rgb(22, 133, 55);"><u>Hire Driver</u></h3>
+            <label for="Name">Driver Name:</label>
+            <input type="text" name="name" id="name"/>
+            <label for="Rating">Driver Rating:</label>
+            <input type="text" name="rating" id="rating"/>
+            <input type="submit" value="Submit" onclick="postDriver()">
+        </form>
+    </div>
+    <!--Delete Driver-->
+    <div>
+        <form onsubmit="return false;" method="post">
+            <h3 style="color:red;"><u>Fire Driver</u></h3>
+            <label for="Id">Driver Id:</label>
+            <input type="text" name="delete" id="delete"/> 
+            <input type="submit" value="Delete" onclick="deleteDriver()">
+        </form>
+    </div>
+    <!--Edit Driver-->
+    <div>
+        <form onsubmit="return false;" method="post">
+            <h3 style="color: blue;"><u>Edit Driver Rating</u></h3>
+            <label for="Id">Driver Id:</label>
+            <input type="text" name="id" id="id"/> 
+            <label for="Rating">Driver New Rating:</label>
+            <input type="text" name="rating" id="Rating"/>
+            <input type="submit" value="Submit" onclick="updateTheDriver()">
+        </form>
+    </div>
+    
+    <script src="./scripts/index.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
